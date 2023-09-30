@@ -18,7 +18,12 @@ int main() {
   for (int i = 0; i < 5; i++) {
     int random_row = rand() % 5;
     int random_column = rand() % 5;
-    ships[random_row][random_column] = 1;
+    if (ships[random_row][random_column] == 0) {
+      ships[random_row][random_column] = 1;
+    } else {
+      i--;
+    }
+    
   }
 
 // Welcome to game
